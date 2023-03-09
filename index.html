@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/icons/academloIcon.svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/source/icons/academloIcon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./source/style/style.css" />
+    <title>Academlo E-commerce</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="main__navbar">
+        <div class="navbar__leftContent">
+          <a class="logo" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48.92 56.48"
+              class="nav__logo-icon"
+            >
+              <title>Academlo Logo</title>
+              <g>
+                <g>
+                  <path
+                    d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z"
+                  ></path>
+                  <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <p class="textNav f-roboto-700">STORE</p>
+          <div class="navbar__menuDesktop f-roboto-500">
+            <a href="#HOME">Home</a>
+            <a href="#PRODUCTS">Products</a>
+          </div>
+        </div>
+
+        <div class="navbar__menu f-roboto-500">
+          <a><ion-icon name="close-outline" class="hideMenu"></ion-icon></a>
+          <a href="#HOME">HOME</a>
+          <a href="#PRODUCTS">PRODUCTS</a>
+        </div>
+
+        <div class="navbar__rightContent">
+          <div class="rightContent__moodPage iconsContainerRelative">
+            <a class="bx bx-moon absolute-CenterItems"><i></i></a>
+            <!-- luna -->
+            <a class="bx bx-sun absolute-CenterItems hideIcon"><i></i></a>
+            <!-- Sol (Para modo noche) -->
+          </div>
+          <div class="rightContent__shoppingBagIcon iconsContainerRelative">
+            <a
+              ><i class="bx bx-shopping-bag absolute-CenterItems showCart"></i
+            ></a>
+            <!-- Bolsa de compras -->
+            <div class="shoppingBagIcon__count"></div>
+            <!-- Contador -->
+          </div>
+
+          <a><i class="bx bx-grid-alt"></i></a>
+          <!-- Boton de menú (mobile) -->
+        </div>
+
+        <div class="navbar__cart">
+          <div class="cart__content">
+            <h3 class="f-roboto-400">My Cart</h3>
+            <div class="content__products">
+              <!-- content__products-withProducts content__products-empty -->
+            </div>
+
+            <div class="content__count"></div>
+          </div>
+
+          <a><ion-icon name="close-outline" class="hideMenu"></ion-icon></a>
+        </div>
+        <!-- El contenido de esto con JS -->
+      </nav>
+
+      <main class="main__container" id="HOME">
+        <section class="container__home">
+          <div class="home__product">
+            <img src="/source/img/home.png" alt="homeImage" />
+          </div>
+          <div class="home__description">
+            <div class="description__text">
+              <h2>New Sweatshirt<br />COLLECTIONS 2022</h2>
+              <p>
+                Latest arrival of the new Hanes Midweight Crewneck sweatshirt
+                imported from the 2022 series, with a modern design.
+              </p>
+            </div>
+            <p class="f-roboto-700">
+              $14.00
+              <span class="f-roboto-400 stockProduct" id="4">| Stock: 10</span>
+            </p>
+
+            <div class="description__btn">
+              <a href="#HOME" class="btn_basic btn-discover f-roboto-500"
+                >Discover</a
+              >
+              <button class="btn_basic btn-add f-roboto-500" id="4">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="container__shop" id="PRODUCTS">
+          <div class="shop__filter">
+            <button class="btn_basic f-roboto-500" data-filter="all">
+              Show all <br />
+              <span>Show all products</span>
+            </button>
+            <div class="divider"></div>
+            <button class="btn_basic f-roboto-500" data-filter=".hoodies">
+              Hoodies <br />
+              <span>3 products</span>
+            </button>
+            <div class="divider"></div>
+            <button class="btn_basic f-roboto-500" data-filter=".shirts">
+              Shirts <br />
+              <span>4 products</span>
+            </button>
+            <div class="divider"></div>
+            <button class="btn_basic f-roboto-500" data-filter=".sweatshirts">
+              Sweatshirts <br />
+              <span>4 products</span>
+            </button>
+          </div>
+          <!-- Usar buttons -->
+          <div class="shop__products"></div>
+        </section>
+      </main>
+
+      <footer class="main__footer">
+        <div class="footer__section">
+          <h3>Our Information</h3>
+          <div class="section__links">
+            <a href="#">Los Rios - Ecuador</a>
+          </div>
+        </div>
+        <div class="footer__section">
+          <h3>About Us</h3>
+          <div class="section__links">
+            <a href="#">Support Center</a>
+            <a href="#">Customer Support</a>
+            <a href="#">About Us</a>
+            <a href="#">Copy Right</a>
+          </div>
+        </div>
+        <div class="footer__section">
+          <h3>Product</h3>
+          <div class="section__links">
+            <a href="#">Hoodies</a>
+            <a href="#">Shirts</a>
+            <a href="#">Sweatshirts</a>
+          </div>
+        </div>
+        <div class="footer__section">
+          <h3>Social</h3>
+          <div class="section__icons">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </div>
+        <hr />
+        <p class="f-roboto-400">
+          © ACADEMLO. All rigths reserved.
+          <a href=""><i class="bx bxl-github"></i></a>
+        </p>
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+      integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/source/js/script.js"></script>
+  </body>
+</html>
